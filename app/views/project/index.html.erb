@@ -1,0 +1,33 @@
+
+<main class="container home">
+  <div class="row home-header">
+
+    <div class="col-md-1 mr-auto">
+  <button id="new-project-button" class="button1">New</button> 
+  <div id="new-project-popover" class="project-popover is-hidden">
+  <form action="/projects" accept-charset="UTF-8" data-remote="true" method="post" id="project-form">
+    <%= form_with(model: @project) do |f| %>
+      <div class="form-group">
+        <%= f.text_field :name, class: "form-control", id: "project-name-input", placeholder: "Name this project", autofocus: true %>
+      </div>
+      <%= f.submit "Save", class: "btn btn-success" %>
+      <button id="cancel-project-popover" class="btn btn-secondary">Cancel</button>
+      
+     <% end %>     
+   </form> 
+  </div>
+
+  </div>
+    <div class="col-md-4">
+      <h3 class="text-center">Projects</h3> 
+    </div>
+    <div class="col-md-1 ml-auto">
+      <button class="btn ml-auto">...</button> 
+    </div>
+  </div>  
+  <div id="project-list" class="row home-projects">
+    <% @projects.each do |project| %>
+      <%= render "project_card", project: project %>
+    <% end %>
+  </div>
+</main>

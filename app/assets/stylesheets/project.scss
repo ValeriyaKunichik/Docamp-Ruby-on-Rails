@@ -1,0 +1,226 @@
+// Place all the styles related to the Project controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.home {
+    h3 {
+      color: #e98074;
+      font-size: 3rem;
+    }
+  
+    .home-header {
+      margin-bottom: 3rem;
+    }
+  }
+  
+  .project-col {
+    margin-bottom: 1.5rem;
+  }
+
+  .button1 {
+    background-color: #f2c76e;
+    border:none;
+    font-weight: 500;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 15px;    
+  }
+  
+  .btn-success {
+    background-color: #e98074;
+    font-size: 1.5rem;
+    &:hover{
+        background-color: #f2c76e; 
+    }     
+  }
+  
+  .btn-secondary {
+    font-size: 1.5rem;      
+  }
+
+  .form-control {
+    font-size: 1.5rem;
+  }
+
+  .project-card {
+    display: block;
+    color: #413f3d;
+    background-color: #fff;
+    box-shadow: 0 1px 2px #aa9c84;
+    border-radius: 6px;
+    padding: 1.5rem;
+    height: 100%;
+  
+    &:hover {
+      text-decoration: none;
+      color: #283c46;
+    }
+  
+    h4 {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+  
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  main.container {
+    margin-top: 4rem;
+  }
+  
+  @media (min-width: 48em) {
+    .container {
+      max-width: 68rem;
+    }
+  }
+
+  .project-popover {
+    width: 220px;
+    position: absolute;
+    top: 3rem;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.25);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    z-index: 1;
+    background-color: #fff;
+    padding: 1rem 1rem 2rem;
+  }
+
+  .is-hidden {
+    display: none;
+  }
+
+  .project-name {
+    color: #e98074;
+    font-size: 3rem;
+  }
+
+
+  .project-title {
+    margin-bottom: 3rem;
+  }
+  
+  .project-col, .feature-col {
+    margin-bottom: 1.5rem;
+  }
+  
+  .project-card, .feature-card {
+    display: block;
+    color: #413f3d;
+    background-color: #fff;
+    box-shadow: 0 1px 2px #aa9c84;
+    border-radius: 6px;
+    padding: 1.5rem;
+    height: 100%;
+  
+    &:hover {
+      text-decoration: none;
+      color: #e98074;
+    }
+  
+    h4 {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+  
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  .feature-card {
+    h4 {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(0,0,0,0.25);
+    }
+    img {
+      text-align: center;
+      display: block;
+      width: 48px;
+      margin: 0 auto 1rem;
+      margin-bottom: 2rem;
+    }
+    p {
+      text-align: center;
+    }
+  }
+
+.project-nav {
+  text-align: center;
+  font-size: 1.6rem;
+  
+  a {
+    color: #e98074;
+    text-decoration: underline;
+  }
+}
+
+.chat-wrapper {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  
+  .chat-form {
+    margin-top: auto;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin: 60px;
+  color: rgb(110, 110, 110);
+  font-size: 7rem;
+  font-weight: 700;
+  .docamp{
+    color:  #e98074;
+  }
+}
+
+.center h2 {
+  margin: 30px;
+  margin-bottom: 60px;
+  color: gray;
+  font-size: 3rem;
+  .docamp{
+    color:  #e98074;
+  }
+}
+
+.btn-login {
+  width: 150px;
+  height: 60px;
+  text-align: center;
+  margin-right: 60px;
+  border-radius: 10px;
+  color:white;
+  background-color: #e98074;
+  font-size: 3rem;
+  &:hover{
+      background-color: #f2c76e; 
+      color:white;
+  }     
+}
+
+.btn-signup {
+  width: 150px;
+  height: 60px;
+  border-radius: 10px;
+  color:white;
+  text-align: center;
+  background-color: #f2c76e;
+  font-size: 3rem;
+  &:hover{
+      background-color: #e98074; 
+      color:white;
+  }     
+}
