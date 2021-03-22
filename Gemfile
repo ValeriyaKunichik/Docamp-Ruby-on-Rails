@@ -6,8 +6,6 @@ ruby '2.7.2'
 
 gem 'rails', '~> 6.1.3'
 
-gem 'sqlite3', '~> 1.4'
-
 gem 'puma', '~> 5.0'
 
 gem 'sass-rails', '>= 6'
@@ -52,6 +50,13 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+group :development, :test do 
+   gem 'sqlite3', '~> 1.4'   #gem to use in development-test environment
+end
+
+group :production do 
+  gem 'pg'         #gem to use in production environment
+end
 
 group :production do
   gem 'pg', '0.15.1'
