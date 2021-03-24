@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   
   match '/login',   to: 'loginsystem#login',   via: 'get'
   match '/signup', to: 'users#new', via: 'get'
-
+  match '/projects', to: 'project#index', via: 'get'
 
   get 'message/create'
   get 'loginsystem', to: 'loginsystem#login'
