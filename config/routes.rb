@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'users/new'
+  resources :users
+
   root "project#indexpage"
   
   match '/login',   to: 'loginsystem#login',   via: 'get'

@@ -1,3 +1,59 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+/* forms */
+@import "bootstrap/scss/bootstrap";
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.signupform {
+    align-items: center;
+    width: 50%;
+    margin-left: 25%;
+    .button1 {
+    margin-top: 10px;
+    background-color: #f2c76e;
+    border:none;
+    font-weight: 500;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 15px;    
+    width: auto;
+    
+  }
+    label {
+    margin: 0.3em;
+  }
+    input:hover{
+        border: 1px solid #f2c76e;;
+    }
+  
+   input, textarea, select, .uneditable-input {
+    border: 1px solid #bbb;
+    width: 100%;
+    margin-bottom: 15px;
+    
+    @include box_sizing;    
+  }
+   
+  input {
+    height: auto !important;
+  }
+   
+  }
+ 
+  
+  .pageTitle{
+    margin-top: 1em;
+    color: #e98074;
+    font-size: 3rem;
+    text-align: center;
+  }
+  
+  

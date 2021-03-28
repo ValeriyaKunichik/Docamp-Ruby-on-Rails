@@ -14,7 +14,9 @@
   <body>
     
     <%= render "layouts/navbar.html"  %> 
-    
+    <% flash.each do |key, value| %>
+        <div id="alert" class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
     <%= yield %>
      
  <script>
