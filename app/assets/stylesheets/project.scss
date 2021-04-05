@@ -283,3 +283,27 @@ aside {
   font-style: oblique;
   text-align: center;
 }
+
+.newuser{
+  text-align: center;
+}
+
+.buttoncenter {
+  background-color: #f2c76e;
+  border:none;
+  font-weight: 500;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 15px;    
+}
+
+.linkcolor {
+  color:  #f2c76e; 
+  font-size: 1.5rem;
+  &:hover{
+      color:#e98074;
+  }     
+}
+

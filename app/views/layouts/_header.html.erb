@@ -6,26 +6,31 @@
       </a>
       <ul id="mainnav" class="navbar-nav align-self-right">
         <li class="nav-item">
-          <%= link_to "Home", projects_path, class: "nav-link"%>
+          <%= link_to "Home", root_path, class: "nav-link"%>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Latest activity</a>
+          <%= link_to "Users", projects_path, class: "nav-link"%>
+        </li>
+        <% if signed_in %>
+        <li class="nav-item">
+          <%= link_to "Account", projects_path, class: "nav-link"%>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pings</a>
+          <%= link_to "Profile", current_user, class: "nav-link"%>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Hey!</a>
+          <%= link_to "Settings", projects_path, class: "nav-link"%>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Campfires</a>
+          <%= link_to "Sing out",  signout_path, method: "delete", class: "nav-link"%>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Reports</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Find</a>
-        </li>
+
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Sign in", signin_path, class: "nav-link"%>
+           </li>      
+          <% end %>
+
       </ul>
       
         </li>

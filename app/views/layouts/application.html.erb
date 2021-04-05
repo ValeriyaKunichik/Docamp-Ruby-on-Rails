@@ -12,8 +12,7 @@
   </head>
 
   <body>
-    
-    <%= render "layouts/navbar.html"  %> 
+    <%= render "layouts/header.html"  %> 
     <% flash.each do |key, value| %>
         <div id="alert" class="alert alert-<%= key %>"><%= value %></div>
       <% end %>

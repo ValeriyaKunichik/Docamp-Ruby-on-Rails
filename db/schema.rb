@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_21_115445) do
+ActiveRecord::Schema.define(version: 2021_04_01_202449) do
 
   create_table "messages", force: :cascade do |t|
     t.text "content"
@@ -33,7 +33,9 @@ ActiveRecord::Schema.define(version: 2021_03_21_115445) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
+    t.string "remember_token"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["remember_token"], name: "index_users_on_remember_token"
   end
 
   add_foreign_key "messages", "projects"
