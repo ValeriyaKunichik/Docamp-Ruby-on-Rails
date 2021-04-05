@@ -1,4 +1,5 @@
 <nav  class="navbar navbar-expand-lg justify-content-between">
+     
       <a class="navbar-brand" href="#">
        <%= image_tag("logogo.jpg", :alt => "logo", :width => 45, :class =>'.nav-item.navbar-profile-icon') %> 
        <span class="logo"> DOCAMP </span>
@@ -11,7 +12,7 @@
         <li class="nav-item">
           <%= link_to "Users", projects_path, class: "nav-link"%>
         </li>
-        <% if signed_in %>
+      <% if signed_in %>
         <li class="nav-item">
           <%= link_to "Account", projects_path, class: "nav-link"%>
         </li>
@@ -25,12 +26,12 @@
           <%= link_to "Sing out",  signout_path, method: "delete", class: "nav-link"%>
         </li>
 
-        <% else %>
+      <%else%> 
           <li class="nav-item">
             <%= link_to "Sign in", signin_path, class: "nav-link"%>
            </li>      
-          <% end %>
-
+          
+      <%end%>
       </ul>
       
         </li>
