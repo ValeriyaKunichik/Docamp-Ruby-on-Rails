@@ -10,11 +10,11 @@
           <%= link_to "Home", root_path, class: "nav-link"%>
         </li>
         <li class="nav-item">
-          <%= link_to "Users", projects_path, class: "nav-link"%>
+          <%= link_to "Users", users_path, class: "nav-link"%>
         </li>
       <% if signed_in %>
         <li class="nav-item">
-          <%= link_to "Account", projects_path, class: "nav-link"%>
+          <%= link_to "Edit profile", edit_user_path(current_user), class: "nav-link"%>
         </li>
         <li class="nav-item">
           <%= link_to "Profile", current_user, class: "nav-link"%>

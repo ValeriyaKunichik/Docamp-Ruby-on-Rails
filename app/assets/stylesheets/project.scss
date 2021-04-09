@@ -255,9 +255,11 @@ aside {
     h1 {
       font-size: 2em;
       text-align: left;
-      letter-spacing: -1px;
+     
+      color:#e98074;
+      margin-left: 40px;
       margin-bottom: 3px;
-      margin-top: 0px;
+      margin-top: 10px;
     }
   }
 }
@@ -307,3 +309,25 @@ aside {
   }     
 }
 
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid;
+    
+    color:#413f3d;
+    &:last-child {
+      border-bottom: 1px solid;
+
+    }
+  }
+  .userlist{
+    padding-right:10px; 
+    color:#413f3d;
+  }
+  .del{
+    color:#e98074;
+  }
+}
