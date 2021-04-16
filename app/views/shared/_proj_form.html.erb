@@ -1,0 +1,13 @@
+<%= form_for(@proj) do |f| %>
+  
+  <div class="signupform newproj">
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_area :name, placeholder: "Please, enter project's name" %>
+  </div>
+  <div class="field">
+    <%= f.text_area :description, placeholder: "Please, enter project's description" %>
+  </div>
+  
+  <%= f.submit "New project", class: "buttoncenter" %></div>
+<% end %>

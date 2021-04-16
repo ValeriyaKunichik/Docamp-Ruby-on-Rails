@@ -1,11 +1,15 @@
+<main class="container home">
 <% provide(:title, "Edit user") %>
 <h1 class="pageTitle">Update your profile</h1>
-
+<div class="button-right">
+<%= link_to "Delete", @user, class: "button2", method: :delete,
+                                  data: { confirm: "Are you sure?" } %>
+ </div>                                 
 <div class="row">
   <div class="signupform">
     <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages' %>
-
+      <%= render 'shared/error_messages', object: f.object %>
+     
      <%= f.label :name %>
       <%= f.text_field :name %>
 
@@ -24,3 +28,4 @@
 
   </div>
 </div>
+</main>

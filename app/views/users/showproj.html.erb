@@ -1,0 +1,15 @@
+<main class="container home">
+  <h3 class="project-title text-center">
+    <%= @proj.name %>
+  </h3>
+  <div class="button-right">
+    <%= link_to "Update", edit_proj_path, class: "button3" %>   
+    <%= link_to "Delete", @proj, class: "button2", method: :delete,
+                                  data: { confirm: "Are you sure?" } %>                           
+ </div>       
+  <div class="row">
+    <%= render "feature_card", feature_link: '', title: "Discussion room", img_src: "chat", img_alt: "Chat", description: "Chat with the group, ask questions and share stuff." %>
+    <%= render "feature_card", feature_link: '', title: "To-dos", img_src: "todos2", img_alt: "To-Dos", description: "Make lists of work that needs to get done." %>
+    <%= render "feature_card", feature_link: '', title: "Docs & Files", img_src: "Folder", img_alt: "Docs and files", description: "Share docs, files images and spreadsheets." %>
+  </div>
+</main>

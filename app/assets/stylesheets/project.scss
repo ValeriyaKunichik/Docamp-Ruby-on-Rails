@@ -19,6 +19,7 @@
   }
 
   .button1 {
+    margin: 20rem;
     background-color: #f2c76e;
     border:none;
     font-weight: 500;
@@ -26,9 +27,56 @@
     padding: 10px 20px;
     text-align: center;
     font-size: 2rem;
-    border-radius: 15px;    
+    border-radius: 15px;
+    &:hover {
+      text-decoration: none;
+      color: #283c46;
+    }  
   }
-  
+  .button-right{
+    text-align: right;
+    margin-bottom: 20px;
+    
+  }
+
+  .button2 {
+    display:inline-flex;
+    margin-bottom: 20px;
+    width: 80px;
+    background-color:#e98074;
+    border:none;
+    font-weight: 500;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 15px;
+    &:hover {
+      text-decoration: none;
+      background-color:#f2c76e;
+      color:#fff;
+    }  
+  }
+
+  .button3 {
+    display:inline-flex;
+    
+    margin-bottom: 20px;
+    width: 90px;
+    background-color:#f2c76e;
+    border:none;
+    font-weight: 500;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 15px;
+    &:hover {
+      text-decoration: none;
+      background-color:#e98074;
+      color:#fff;
+    }  
+  }
 
 
   .btn-success {
@@ -253,7 +301,7 @@ aside {
       line-height: 1;
     }
     h1 {
-      font-size: 2em;
+      font-size: 1em;
       text-align: left;
      
       color:#e98074;
@@ -330,4 +378,18 @@ aside {
   .del{
     color:#e98074;
   }
+}
+
+.allprojects{
+  width: 100%;
+  h1{
+  text-align: center;
+  color:#e98074;
+  }
+}
+
+.allprojs{
+  padding-right: 10%;
+  padding-left: 10%;
+  margin: 20px;
 }

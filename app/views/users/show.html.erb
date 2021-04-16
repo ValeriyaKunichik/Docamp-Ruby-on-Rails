@@ -8,4 +8,25 @@
       </h1>
     </section>
   </aside>
+
+  <div class="allprojects">
+    
+      <h1>Projects (<%= @user.projs.count %>)</h1>
+      <%= link_to "New", '/home', class: "button1"%>
+      <div class="allprojs">
+      
+      <% if @user.projs.any? %>
+      <ol class="projs">
+      
+       <div id="project-list" class="row home-projects">
+    <% @projs.each do |proj| %>
+      <%= render "project_card", proj: proj%>
+    <% end %>
+  </div>
+      </ol>
+      <% end %>
+    </div>
+  </div> 
+
+
 </div>

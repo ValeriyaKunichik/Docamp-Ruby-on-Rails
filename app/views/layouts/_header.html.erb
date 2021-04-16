@@ -7,20 +7,14 @@
       </a>
       <ul id="mainnav" class="navbar-nav align-self-right">
         <li class="nav-item">
-          <%= link_to "Home", root_path, class: "nav-link"%>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Users", users_path, class: "nav-link"%>
+          <%= link_to "All users", users_path, class: "nav-link"%>
         </li>
       <% if signed_in %>
         <li class="nav-item">
           <%= link_to "Edit profile", edit_user_path(current_user), class: "nav-link"%>
         </li>
         <li class="nav-item">
-          <%= link_to "Profile", current_user, class: "nav-link"%>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Settings", projects_path, class: "nav-link"%>
+          <%= link_to "My projects", current_user, class: "nav-link"%>
         </li>
         <li class="nav-item">
           <%= link_to "Sing out",  signout_path, method: "delete", class: "nav-link"%>

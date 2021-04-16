@@ -1,24 +1,32 @@
 class UsersController < ApplicationController
   before_action :signed_in_user, only: [:edit, :update, :show, :index]
   before_action :correct_user,   only: [:edit, :update]
-  before_action :admin_user,     only: :destroy
+  
+  
   def index
     @users = User.all
   end
   
+  
+
   def new
     @user = User.new
   end
 
   def show
     @user = User.find(params[:id])
+    @projs = @user.projs  
   end
+  
+  
+
 
   def create
     @user = User.new(user_params)
+    @user.admin=1;
     if @user.save
       sign_in @user
-     
+      
       flash[:success] = @user.name+", Welcome to DOCAMP! You will like it"
       redirect_to @user
     else
@@ -45,6 +53,9 @@ class UsersController < ApplicationController
     end
   end
 
+  def home
+    @proj = current_user.projs.build if signed_in
+  end
 
 
   private

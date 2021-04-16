@@ -1,0 +1,10 @@
+<% if proj%>
+<div class="col-md-4 project-col">
+  <%= link_to(proj_path(proj.id), class: "project-card") do %>
+    <h4><%= proj.name %></h4>
+    <% if proj.description  %>
+      <p><%= proj.description %></p>
+    <% end %>
+  <% end %>
+</div>
+ <% end %>
