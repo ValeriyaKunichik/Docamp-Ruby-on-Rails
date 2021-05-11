@@ -2,15 +2,15 @@
 <% provide(:title, "Edit user") %>
 <h1 class="pageTitle">Update your profile</h1>
 <div class="button-right">
-<%= link_to "Delete", @user, class: "button2", method: :delete,
-                                  data: { confirm: "Are you sure?" } %>
- </div>                                 
+  <%= link_to "Delete", @user, class: "button2", method: :delete,
+                                data: { confirm: "Are you sure?" } %>
+</div>                                 
 <div class="row">
   <div class="signupform">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
      
-     <%= f.label :name %>
+      <%= f.label :name %>
       <%= f.text_field :name %>
 
       <%= f.label :email %>
@@ -21,9 +21,19 @@
 
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation %>
+ 
+      <div class="admin_container">
+      <div class="admin_subcontainer">                     
+        <%= f.label :admin %>
+        <%= f.radio_button :admin, 1, checked:true %>
+      </div>
+      <div class="admin_subcontainer">                     
+        <%= f.label :not_admin %>
+        <%= f.radio_button :admin, 0 %>
+      </div>
+    </div>
 
-
-      <%= f.submit "Save changes", class: "buttoncenter" %>
+    <%= f.submit "Save changes", class: "buttoncenter" %>
     <% end %>
 
   </div>

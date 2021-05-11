@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :projs, dependent: :destroy
+  #has_many :teams, foreign_key: "user_id", dependent: :destroy
   before_save { self.email = email.downcase }
   before_create :create_remember_token
   validates :name, presence: true, length: { maximum: 50 }
@@ -16,6 +17,19 @@ class User < ApplicationRecord
 
   def User.digest(token)
     Digest::SHA1.hexdigest(token.to_s)
+  end
+
+
+  def is_proj_team(proj)
+    teams.find_by(project_id: proj.id)
+  end
+
+  def add_to_proj_team(proj)
+    teams.create!(project_id: proj.id)
+  end
+
+  def delete_from_team(proj)
+    teams.find_by(project_id: proj.id).destroy
   end
 
   private

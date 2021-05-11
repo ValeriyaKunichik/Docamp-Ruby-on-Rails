@@ -3,20 +3,18 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :projs, only: [:create, :destroy, :showproj, :update, :edit_proj, :edit]
 
-
-  
   root "project#indexpage"
   match '/home',  to: 'users#home',         via: 'get'
   match '/login',   to: 'loginsystem#login',   via: 'get'
   match '/signup', to: 'users#new', via: 'get'
+  match '/add', to: 'users#add', via: 'get'
   match '/projects', to: 'project#index', via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   match '/signin',  to: 'sessions#create',         via: 'post'
   get 'message/create'
-  
-  
+    
   get 'indexpage', to: 'project#indexpage'
   get 'projs/:id', to: 'users#showproj'
   get 'projects', to: 'project#index'

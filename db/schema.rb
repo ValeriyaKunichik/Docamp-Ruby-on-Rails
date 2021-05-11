@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_11_201830) do
+ActiveRecord::Schema.define(version: 2021_04_17_193434) do
 
   create_table "messages", force: :cascade do |t|
     t.text "content"
@@ -43,6 +43,16 @@ ActiveRecord::Schema.define(version: 2021_04_11_201830) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id", "created_at"], name: "index_projs_on_user_id_and_created_at"
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.integer "project_id"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["project_id", "user_id"], name: "index_teams_on_project_id_and_user_id", unique: true
+    t.index ["project_id"], name: "index_teams_on_project_id"
+    t.index ["user_id"], name: "index_teams_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -16,9 +16,9 @@
 
 
 
- html {
+html {
     font-size: 10px;
-  }
+}
   
 body {
     color: #413f39;
@@ -36,20 +36,16 @@ body {
 }
 
 .logo:hover {
-  text-decoration: none;
-  color: #e98074;
+    text-decoration: none;
+    color: #e98074;
  } 
 
-
-
-
-
- main.container {
-  margin-top: 4rem;
+main.container {
+    margin-top: 4rem;
 }
 
 @media (min-width: 48em) {
-  .container {
-    max-width: 68rem;
-  }
+    .container {
+        max-width: 68rem;
+    }
 }

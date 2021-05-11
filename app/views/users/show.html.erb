@@ -2,8 +2,7 @@
 <div class="row">
   <aside class="span4">
     <section>
-      <h1>
-       
+      <h1> 
         <%= @user.name %>
       </h1>
     </section>
@@ -17,14 +16,13 @@
       
       <% if @user.projs.any? %>
       <ol class="projs">
-      
-       <div id="project-list" class="row home-projects">
-    <% @projs.each do |proj| %>
-      <%= render "project_card", proj: proj%>
-    <% end %>
-  </div>
+        <div id="project-list" class="row home-projects">
+          <% @projs.each do |proj| %>
+            <%= render "project_card", proj: proj%>
+          <% end %>
+        </div>
       </ol>
-      <% end %>
+        <% end %>
     </div>
   </div> 
 

@@ -4,7 +4,7 @@ class ProjsController < ApplicationController
     def create
       @proj = current_user.projs.build(proj_params)
       if @proj.save
-        flash[:success] = "Project created!"
+        flash[:success] = "Project created!" 
         redirect_to current_user
       else
         render 'users/home'
@@ -20,7 +20,9 @@ class ProjsController < ApplicationController
     end
 
     def destroy
-      Proj.find(params[:id]).destroy
+      @proj = Proj.find(params[:id])
+      @proj.destroy
+      #Proj.find(params[:id]).destroy
       flash[:success] = "Project deleted."
       redirect_to @current_user
     end
@@ -34,9 +36,10 @@ class ProjsController < ApplicationController
         render 'edit'
       end
     end
+
     private
   
-      def proj_params
-        params.require(:proj).permit(:name, :description)
-      end
-  end
+    def proj_params
+      params.require(:proj).permit(:name, :description)
+    end
+end

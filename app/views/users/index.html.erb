@@ -1,16 +1,26 @@
 <% provide(:title, 'All users') %>
 <h1 class="pageTitle">All users</h1>
-
+<div class="button-right">
+    <%= link_to "Add new user", add_path , class: "button4" %> 
+</div>  
 <ul class="users">
   <% @users.order(:name).each do |user| %>
     <li>
       <%= link_to user.name, user, class: "userlist" %>
       <%= link_to user.email, user, class: "userlist"%>
       <% if current_user.admin? && !current_user?(user) %>
-      
-    |&nbsp; <%= link_to "delete", user, class: "del", method: :delete,
+
+        |&nbsp; <%= link_to "delete", user, class: "del", method: :delete,
                                   data: { confirm: "Are you sure?" } %>
+                                 
       <% end %>                            
-    </li>
+    
+    <% if user.admin?%>
+      |&nbsp; Admin
+    <% else %> 
+      |&nbsp; Not Admin                            
+    <% end %> 
+ 
+  </li> 
   <% end %>
 </ul>
